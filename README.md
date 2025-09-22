@@ -73,7 +73,7 @@ In mTLS passthrough mode, Application Gateway requests a client certificate duri
 
 Run the following command in your working directory:
 ```sh
-az deployment group create --resource-group <your-resource-group> --template-file mtlsdeploy_novmss.json --parameters azuredeployv2.newcert.parameters.json
+az deployment group create --resource-group <your-resource-group> --template-file mtlsdeploy_novmss.json --parameters mtls.parameters.json
 ```
 
 ### 3. Validate Deployment
