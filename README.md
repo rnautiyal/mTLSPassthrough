@@ -1,8 +1,13 @@
-# mTLS Passthrough Listener Deployment on Azure Application Gateway
+                              # mTLS Passthrough Listener Deployment on Azure Application Gateway
 
 ## Overview
 
 This repository provides step-by-step guidance and ARM templates for deploying an Azure Application Gateway with **mutual TLS (mTLS) passthrough listener** using the latest Azure API (version `2025-03-01`). In mTLS passthrough mode, the Application Gateway requests a client certificate but does **not** enforce verification at the gateway. The backend is responsible for certificate validation and policy enforcement.
+
+## Note
+
+This deployment is intended **for testing purposes only**.  
+**Do not use with production workloads.**
 
 ## Key Features
 
