@@ -4,7 +4,7 @@
 
 This repository provides ARM templates and step-by-step guidance for deploying an **Azure Application Gateway** configured with a **mutual TLS (mTLS) passthrough listener**.
 
-In mTLS passthrough mode, Application Gateway requests a client certificate during TLS negotiation but does **not enforce client-certificate verification at the edge**. The gateway forwards the client certificate (and related attributes, if available) to the backend via server variables or header injection. The backend is responsible for verifying the certificate chain, mapping identity, and enforcing policy. Connectivity is not rejected at the gateway based solely on client-certificate state.
+In mTLS passthrough mode, Application Gateway requests a client certificate during TLS negotiation but does **not enforce client-certificate verification at the Application Gateway**. The gateway forwards the client certificate (and related attributes, if available) to the backend via server variables or header injection. The backend is responsible for verifying the certificate chain, mapping identity, and enforcing policy. Connectivity is not rejected at the gateway based solely on client-certificate state.
 
 ---
 
@@ -62,11 +62,10 @@ In mTLS passthrough mode, Application Gateway requests a client certificate duri
 
 ### 1. Review and Customize Parameters
 
-- Open `azuredeployv2.newcert.parameters.json`
+- Open `mtls.parameters.json`
 - Update values for:
   - `addressPrefix` and `subnetPrefix`: Define your network ranges.
   - `skuName` and `capacity`: Choose gateway size and instance count.
-  - `adminUsername` and `adminSSHKey`: Set admin credentials.
   - `certData` and `certPassword`: Paste your SSL certificate and password.
 
 ### 2. Deploy Using Azure CLI
