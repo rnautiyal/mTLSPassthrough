@@ -22,6 +22,7 @@ This deployment is intended **for testing purposes only**.
 - Admin access to Azure CLI
 - SSL certificate for the listener
 - API version: `2025-03-01`
+- Post creationg updates need to be performed via ARM template using API version `2025-03-01`
 
 ## Deployment Steps
 
