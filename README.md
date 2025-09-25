@@ -41,12 +41,12 @@ This deployment is intended **for testing purposes only**.
    - In Azure Portal, check the Application Gateway resource.
    - Confirm that the **mTLS passthrough listener** is enabled.
 
-4. **Send Client Certificate to **
+4. **Send Client Certificate to backend**
      - If you need to forward the client certificate to the backend, configure a rewrite rule as described in https://docs.azure.cn/en-us/application-       gateway/rewrite-http-headers-url#mutual-authentication-server-variables.
        <img width="1024" height="609" alt="image" src="https://github.com/user-attachments/assets/8f65c05f-4e2a-4c10-bd6a-5842797fb0ab" />
 
-     - This ensures the client certificate is included in the request headers for backend processing.
-     - 
+     - If the client has sent a certificate, this rewriteensures the client certificate is included in the request headers for backend processing.
+       
 5.  **Test Connectivity**
    - Connections should be established even if a client certificate is not provided.
 
