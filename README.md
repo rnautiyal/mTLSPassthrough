@@ -56,7 +56,7 @@ This deployment is intended **for testing purposes only**.
 |-------------------------|--------|-----------------------------------------------------------------------------|
 | verifyClientCertIssuerDN| boolean| Verify client certificate issuer name on the gateway                        |
 | verifyClientRevocation  | options| Verify client certificate revocation                                        |
-| verifyClientCertMode    | options| Set client certificate mode (`Strict` or `Passthrough`)                     |
+| VerifyClientAuthMode    | options| Set client certificate mode (`Strict` or `Passthrough`)                     |
 
 **Passthrough Mode:** Gateway requests a client certificate but does not enforce it. Backend validates certificate and enforces policy.
 
