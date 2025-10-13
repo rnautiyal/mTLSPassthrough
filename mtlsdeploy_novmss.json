@@ -180,7 +180,11 @@
                     {
                         "name": "pool2",
                         "properties": {
-                            "BackendAddresses": []
+                            "BackendAddresses": [
+							  {
+                                "fqdn": "headerappgw-hsa5gjh8fpfebcfd.westus-01.azurewebsites.net"
+                              }
+							]
                         }
                     }
                 ],
