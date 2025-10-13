@@ -20,7 +20,7 @@ This deployment is intended **for testing purposes only**.
 
 - Azure subscription and resource group
 - Admin access to Azure CLI
-- SSL certificate for the listener
+- Application Gateway with valid backend and SSL certificate for the https listener
 - API version: `2025-03-01`
 - Post creationg updates need to be performed via ARM template using API version `2025-03-01`
 
